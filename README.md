@@ -18,9 +18,7 @@ A powerful Android app to view and manage 3D models in GLB format.
 ## ✨ Features
 
 - 🔐 **Dual Login System** - Admin and User modes
-- 📂 **File Management** - Upload and organize GLB models
 - 🎨 **3D Viewer** - Interactive rotation, zoom, and pan
 - 📱 **Modern UI** - Material Design 3 interface
-- 🚀 **Fast Performance** - Optimized rendering
 
 
