@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- Title with Icon -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_3d_cube"
+            app:tint="@color/md_theme_primary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Add 3D Model"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/md_theme_on_surface" />
+    </LinearLayout>
+
+    <!-- Model Name Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilModelName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:boxBackgroundMode="filled"
+        app:boxBackgroundColor="#F5F5F5"
+        app:boxCornerRadiusTopStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:startIconDrawable="@drawable/ic_3d_model"
+        app:startIconTint="@color/md_theme_primary"
+        app:hintTextColor="@color/md_theme_primary"
+        style="@style/Widget.Material3.TextInputLayout.FilledBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etModelName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Model Name *"
+            android:inputType="text"
+            android:textSize="16sp"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Model Description Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilModelDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxBackgroundMode="filled"
+        app:boxBackgroundColor="#F5F5F5"
+        app:boxCornerRadiusTopStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:startIconDrawable="@drawable/ic_description"
+        app:startIconTint="@color/md_theme_primary"
+        app:hintTextColor="@color/md_theme_primary"
+        app:counterEnabled="true"
+        app:counterMaxLength="200"
+        style="@style/Widget.Material3.TextInputLayout.FilledBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etModelDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description (Optional)"
+            android:inputType="textMultiLine|textCapSentences"
+            android:textSize="16sp"
+            android:minLines="3"
+            android:maxLines="5"
+            android:gravity="top|start"
+            android:scrollbars="vertical" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Info Text -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="* Required field"
+        android:textSize="12sp"
+        android:textColor="#757575"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp" />
+
+</LinearLayout>

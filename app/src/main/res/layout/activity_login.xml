@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp">
+
+            <!-- Logo Icon -->
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_3d_cube"
+                android:contentDescription="App Logo"
+                app:tint="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="60dp" />
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3D Model Viewer"
+                android:textSize="28sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                app:layout_constraintTop_toBottomOf="@+id/ivLogo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:id="@+id/tvSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Explore models in 3D"
+                android:textSize="14sp"
+                android:textColor="#E0E0E0"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="4dp" />
+
+            <!-- Login Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/loginCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/tvSubtitle"
+                android:layout_marginTop="40dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Welcome Back"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/md_theme_on_surface"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sign in to continue"
+                        android:textSize="14sp"
+                        android:textColor="#757575"
+                        android:layout_marginBottom="24dp" />
+
+                    <!-- Username Field -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilUsername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxBackgroundMode="filled"
+                        app:boxBackgroundColor="#F5F5F5"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        app:startIconDrawable="@drawable/ic_person"
+                        app:startIconTint="@color/md_theme_primary"
+                        style="@style/Widget.Material3.TextInputLayout.FilledBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etUsername"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Username"
+                            android:inputType="text"
+                            android:textSize="16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Password Field -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        app:boxBackgroundMode="filled"
+                        app:boxBackgroundColor="#F5F5F5"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        app:startIconDrawable="@drawable/ic_lock"
+                        app:startIconTint="@color/md_theme_primary"
+                        app:endIconMode="password_toggle"
+                        style="@style/Widget.Material3.TextInputLayout.FilledBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Password"
+                            android:inputType="textPassword"
+                            android:textSize="16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Error Message -->
+                    <TextView
+                        android:id="@+id/tvError"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/md_theme_tertiary"
+                        android:textSize="14sp"
+                        android:visibility="gone"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="4dp" />
+
+                    <!-- Login Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="24dp"
+                        android:text="Login"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:cornerRadius="12dp"
+                        app:elevation="4dp"
+                        style="@style/Widget.Material3.Button.ElevatedButton" />
+
+                    <!-- Demo Credentials Hint -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardBackgroundColor="#FFF3E0"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="12dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="🔑 Demo Credentials"
+                                android:textStyle="bold"
+                                android:textColor="#E65100"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Admin: admin / admin123"
+                                android:textColor="#F57C00"
+                                android:textSize="12sp"
+                                android:layout_marginTop="4dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="User: user / user123"
+                                android:textColor="#F57C00"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</FrameLayout>
