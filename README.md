@@ -10,7 +10,7 @@ A powerful Android app to view and manage 3D models in GLB format.
 [![Download APK](https://img.shields.io/badge/Download-APK%20v1.0-brightgreen?style=for-the-badge&logo=android)](https://github.com/anshu-choubey/3DModelApp/raw/refs/heads/main/app-debug.apk)
 
 **Latest Version:** v1.0  
-**Size:** ~4 MB  
+**Size:** ~6 MB  
 **Updated:** January 4, 2026
 
 ---
